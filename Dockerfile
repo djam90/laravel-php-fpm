@@ -2,8 +2,6 @@ FROM php:7-fpm
 
 COPY --from=composer:latest /usr/bin/composer /usr/bin/composer
 
-USER dan:dan
-
 RUN apt-get update && apt-get install -y \
         git \
         unzip \
